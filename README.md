@@ -27,6 +27,7 @@ Can SomerBlink ban me for using this?
 =====================================
 
 Technically, yes. But good luck detecting people using it!
+Chrome runs its extensions in a sandbox, webpages cannot detect which plugins you have installed
 
 Help! I'm not seeing any Promos!
 ================================
@@ -65,7 +66,7 @@ Updating
 
  - In chrome go to chrome://extensions
  - check the version number
- - if it is not 2.0.1, uninstall the plugin
+ - if it is not 0.2.2, uninstall the plugin
  - follow the manual installation from CRX steps
 
 Uninstalling
