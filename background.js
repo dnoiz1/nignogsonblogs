@@ -48,7 +48,7 @@ socket.on('seen', function(data){
     } 
 
     if (data.prize.image_url.indexOf("//image.eveonline.com") !== 0)  {
-        data.prize.image_url = chrome.extension.getURL('package_128.png');
+        data.prize.image_url = 'http://image.eveonline.com/Alliance/1_128.png';
     } else {
         data.prize.image_url = "http:" + data.prize.image_url;
     }
@@ -56,7 +56,7 @@ socket.on('seen', function(data){
     var description = data.prize.description;
 
     if (typeof data.prize.jita_price == 'number') {
-        description += "\nestimated Jita value: " + (data.prize.jita_price * data.prize.qty).toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + ' ISK';
+        description = "Jita value: " + (data.prize.jita_price * data.prize.qty).toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + ' ISK\n' + description;
     }
     
     var notification = {
