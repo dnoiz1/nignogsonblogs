@@ -1,0 +1,41 @@
+{
+  "manifest_version": 2,
+
+  "name": "Promo Drive Active",
+  "description": "stay aligned to planet blink!",
+  "version": "0.2.1",
+  "background": { "scripts": ["socket.io.js", "background.js"] },
+  "offline_enabled": false,
+
+  "content_scripts": [
+    {
+      "matches": ["*://cogdev.net/*"],
+      "js": ["jquery-1.10.2.min.js", "dom.js"],
+      "run_at": "document_end"
+    }
+  ],
+  
+  "icons": {
+    "128": "icon.png"
+  },
+
+  "permissions": [
+    "*://cogdev.net/*",
+    "*://*.cogdev.net/*",
+    "http://promoblink.herokuapp.com/*",
+    "http://*.promoblink.herokuapp.com/*",
+    "http://image.eveonline.com/*",
+    "tabs",
+    "webRequest",
+    "notifications",
+    "background"
+  ],
+
+"web_accessible_resources": [
+    "package_128.png"
+  ],
+  
+  "browser_action": {
+    "default_icon": "icon.png"
+  }
+}
